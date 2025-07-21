@@ -13,8 +13,7 @@ function App() {
   const [visible, setVisible] = useState(true);
 
   const switcher = () => {
-    console.log("Тыкнули кнопку");
-    setVisible(false);
+    setVisible(!visible);
   };
 
   return (
