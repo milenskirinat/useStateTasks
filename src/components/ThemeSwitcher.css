@@ -1,0 +1,11 @@
+.light {
+  background-color: white;
+  border: 2px black;
+  color: black;
+}
+
+.night {
+  background-color: black;
+  border: 2px white;
+  color: white;
+}

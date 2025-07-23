@@ -2,6 +2,7 @@ import { useState } from "react";
 import Card1 from "./components/Card.tsx";
 import ToggleCard from "./components/ToggleCard.tsx";
 import "./App.css";
+import ThemeSwitcher from "./components/ ThemeSwitcher.tsx";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -16,11 +17,18 @@ function App() {
     setVisible(!visible);
   };
 
+  const [theme, setTheme] = useState("light");
+
+  const themeButton = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
     <>
       <div className="flex flex-row justify-content gap:4px">
         <Card1 handleClick={clicker} counterNumber={counter} />
         <ToggleCard handleClick={switcher} toggleOnOff={visible} />
+        <ThemeSwitcher handleClick={themeButton} themeButton={theme} />
       </div>
     </>
   );
