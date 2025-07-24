@@ -4,6 +4,7 @@ import ToggleCard from "./components/ToggleCard.tsx";
 import "./App.css";
 import ThemeSwitcher from "./components/ThemeSwitcher.tsx";
 import InputMirror from "./components/InputMirror.tsx";
+import FullNameForm from "./components/FullNameForm.tsx";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -30,6 +31,18 @@ function App() {
     setTextinput(e.target.value);
   };
 
+  const [firstname, setFirstName] = useState("");
+
+  const [lastname, setLastname] = useState("");
+
+  const habdleInputNameChange = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const habdleInputLastNameChange = (e) => {
+    setLastname(e.target.value);
+  };
+
   return (
     <>
       <div className="flex flex-row justify-content gap:4px">
@@ -37,6 +50,12 @@ function App() {
         <ToggleCard handleClick={switcher} toggleOnOff={visible} />
         <ThemeSwitcher handleClick={themeButton} themeButton={theme} />
         <InputMirror onChange={handleInpitChange} textinput={textinput} />
+        <FullNameForm
+          onChangeName={habdleInputNameChange}
+          onChangeLastName={habdleInputLastNameChange}
+          firstname={firstname}
+          lastname={lastname}
+        />
       </div>
     </>
   );
