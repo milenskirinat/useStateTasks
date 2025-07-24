@@ -5,6 +5,7 @@ import "./App.css";
 import ThemeSwitcher from "./components/ThemeSwitcher.tsx";
 import InputMirror from "./components/InputMirror.tsx";
 import FullNameForm from "./components/FullNameForm.tsx";
+import ShowDetails from "./components/ShowDetails.tsx";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -43,6 +44,12 @@ function App() {
     setLastname(e.target.value);
   };
 
+  const [details, setDetails] = useState(false);
+
+  const switcherDetails = () => {
+    setDetails(!details);
+  };
+
   return (
     <>
       <div className="flex flex-row justify-content gap:4px">
@@ -56,6 +63,7 @@ function App() {
           firstname={firstname}
           lastname={lastname}
         />
+        <ShowDetails handleClick={switcherDetails} details={details} />
       </div>
     </>
   );
