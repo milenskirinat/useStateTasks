@@ -1,14 +1,17 @@
+import { useState } from "react";
 import "./Card.css";
 
-export default function Counter({ handleClick, counterNumber }) {
-  // const clicker = () => {
-  //   console.log("+");
-  // };
+export default function Card({}) {
+  const [counter, setCounter] = useState(0);
+
+  const clicker = () => {
+    setCounter(counter + 1);
+  };
 
   return (
     <div className="card">
-      <p>{counterNumber}</p>
-      <button onClick={handleClick}>Увеличить</button>
+      <p>{counter}</p>
+      <button onClick={clicker}>Увеличить</button>
     </div>
   );
 }
