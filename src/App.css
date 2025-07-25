@@ -20,3 +20,10 @@
 .justify-content {
   justify-content: center;
 }
+
+.components-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 16px;
+}

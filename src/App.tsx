@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Card from "./components/Card.tsx";
 import ToggleCard from "./components/ToggleCard.tsx";
 import "./App.css";
@@ -6,17 +5,19 @@ import ThemeSwitcher from "./components/Theme/ThemeSwitcher.tsx";
 import InputMirror from "./components/InputMirror.tsx";
 import FullNameForm from "./components/FullNameForm.tsx";
 import ShowDetails from "./components/ShowDetails.tsx";
+import TodoList from "./components/TodoList.tsx";
 
 function App() {
   return (
     <>
-      <div className="flex flex-row justify-content gap:4px">
+      <div className="components-grid">
         <Card />
         <ToggleCard />
         <ThemeSwitcher />
         <InputMirror />
         <FullNameForm />
         <ShowDetails />
+        <TodoList />
       </div>
     </>
   );
