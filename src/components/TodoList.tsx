@@ -14,13 +14,19 @@ export default function TodoList() {
     setNewTodo(e.target.value);
   };
 
+  const taskToRemove = (index) => {
+    setTask(task.filter((_, currentIndex) => currentIndex !== index));
+  };
+
   return (
     <div>
       <input value={newTodo} onChange={handleInputTodoList} />
       <button onClick={handleTodoList}>Add</button>
       <ul>
         {task.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}>
+            {item} <button onClick={() => taskToRemove(index)}>❌</button>
+          </li>
         ))}
       </ul>
     </div>
