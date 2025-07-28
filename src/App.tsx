@@ -7,6 +7,7 @@ import FullNameForm from "./components/FullNameForm.tsx";
 import ShowDetails from "./components/ShowDetails.tsx";
 import TodoList from "./components/TodoList.tsx";
 import RemovableTodoList from "./components/RemovableTodoList.tsx";
+import MultiCounter from "./components/MultiCounter.tsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <ShowDetails />
         <TodoList />
         <RemovableTodoList />
+        <MultiCounter />
       </div>
     </>
   );
