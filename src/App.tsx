@@ -8,6 +8,7 @@ import ShowDetails from "./components/ShowDetails.tsx";
 import TodoList from "./components/TodoList.tsx";
 import RemovableTodoList from "./components/RemovableTodoList.tsx";
 import MultiCounter from "./components/MultiCounter.tsx";
+import EmailForm from "./components/EmailForm.tsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <TodoList />
         <RemovableTodoList />
         <MultiCounter />
+        <EmailForm />
       </div>
     </>
   );
